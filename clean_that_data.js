@@ -1,6 +1,7 @@
 const csv = require('csv-parser');
 const papa = require('papaparse');
 const fs = require('fs');
+const titleCase = require('title-case').titleCase;
 
 const colorsUsed = 'The Joy Of Painting - Colors Used';
 const subjectMatter = 'The Joy Of Painting - Subject Matter';
@@ -17,7 +18,7 @@ function cleanData(fileName, outputFileName) {
         // remove triple quote and make lowercase
         row.TITLE = row.TITLE.replace(/^["']+|["']+$/g, '').toLowerCase();
         // capitalize first letter of each word in title
-        row.TITLE = row.TITLE.replace(/\b\w/g, (char) => char.toUpperCase());
+        row.TITLE = titleCase(row.TITLE);
       }
       cleanedData.push(row);
     })
