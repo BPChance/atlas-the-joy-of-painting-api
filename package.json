@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "papaparse": "^5.5.2"
+  },
+  "name": "atlas-the-joy-of-painting-api",
+  "version": "1.0.0",
+  "description": "Bob ross data cleaning",
+  "main": "clean_that_data.js",
+  "devDependencies": {},
+  "scripts": {
+    "clean": "node clean_that_data.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BPChance/atlas-the-joy-of-painting-api.git"
+  },
+  "author": "braden chance",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BPChance/atlas-the-joy-of-painting-api/issues"
+  },
+  "homepage": "https://github.com/BPChance/atlas-the-joy-of-painting-api#readme"
+}
