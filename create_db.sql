@@ -3,12 +3,11 @@ CREATE TABLE episodes (
     episode_id SERIAL PRIMARY KEY,
     episode_number INTEGER NOT NULL UNIQUE,
     title VARCHAR(255) NOT NULL,
-    broadcast_date DATE NOT NULL,
-    youtube_url VARCHAR(255)
+    date DATE NOT NULL
 );
 
 -- index for filtering by month
-CREATE INDEX idx_episodes_broadcast_month ON episodes (EXTRACT(MONTH FROM broadcast_date));
+CREATE INDEX idx_episodes_broadcast_month ON episodes (EXTRACT(MONTH FROM date));
 
 -- subjects table
 CREATE TABLE subjects (
