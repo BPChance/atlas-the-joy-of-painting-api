@@ -32,7 +32,7 @@ During the development of this API, several challenges emerged:
 - Support for case insensitive queries
   - Users can query without worrying about case sensitivity in subject matter or color fields
 
-## Installation
+## Installation and testing
 
 1.  Clone the repository
 2.  Install dependencies
