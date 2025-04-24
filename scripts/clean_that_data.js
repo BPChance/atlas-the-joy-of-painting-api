@@ -59,6 +59,7 @@ function cleanDateData(fileName, outputFileName) {
   fs.createReadStream(fileName)
     .pipe(csv())
     .on('data', (row) => {
+      // consistent title case for - episode dates
       if (row.TITLE) {
         row.TITLE = titleCase(row.TITLE);
       }
@@ -79,7 +80,7 @@ function cleanDateData(fileName, outputFileName) {
     })
     .on('end', () => {
       const csvOutput = papa.unparse(cleanedData);
-
+      // write to csv file
       fs.writeFileSync(outputFileName, csvOutput);
       console.log(`cleaned data saved to ${outputFileName}`);
     });
